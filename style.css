@@ -218,7 +218,7 @@ nav{
 .form-wrapper input{
     display: block;
     margin: 3rem 0rem;
-    background: var(--background-color);
+    background: #414141;
     color: white;
     border: none;
     padding: 2rem;
