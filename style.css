@@ -1,15 +1,13 @@
 /* Global style */
 html{
-    font-size: 62.5%;
+    font-size: 40%;
     --header1: calc(2rem + 1vw);
     --header2: calc(3.2rem + 1vw);
-    --header3: calc(3rem + 1vw);
+    --header3: calc(2rem + 1vw);
     --header4: calc(2.4rem + 1vw);
-    --text: calc(1.5rem + 1vw);
+    --text: calc(1rem + 1vw);
     --big: calc(6rem + 1vw);
-    --special-color: #906272;
-    --background-color: #414141;
-    --gray-text: #525252;
+    --gray-text: #484848;
     scroll-behavior: smooth;
 
 }
@@ -23,7 +21,11 @@ html{
 
 h1{
     font-size: var(--header1);
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Pattaya', serif;
+    line-height: 26px;
+    letter-spacing: .3rem;
+    font-weight: 400;
+
     
 }
 li, button, label, input, p, a{
@@ -33,6 +35,8 @@ li, button, label, input, p, a{
 }
 h2{
     font-size: var(--header2);
+    letter-spacing: .5rem;
+    font-weight: 400;
 }
 h3{
     font-size: var(--header3);
@@ -46,10 +50,15 @@ ul{
 }
 a{
     text-decoration: none;
-    color: var(--gray-text);
+    color: #484848;
 }
+span{
+    font-size: var(--big);
+    color: #927B40;
+}
+
 body{
-    font-family: 'Frank Ruhl Libre', serif;
+    font-family: 'Poppins', sans-serif;
     animation: opening 1s ease-in-out;
 }
 .flex{
@@ -60,11 +69,12 @@ body{
 
 }
 
+
 /* Nav section */
 .main-head{
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
     z-index: 2;
     position: relative;
+    border-bottom: 2px solid #927B40;
 }
 nav{
     width: 90%;
@@ -82,6 +92,10 @@ nav{
     justify-content: space-around;
     flex: 1 1 20rem;
 }
+.nav:hover{
+    color: #927B40;
+    border-left: 2px solid #927B40;
+}
 
 /* Main section */
 .hero{
@@ -93,20 +107,24 @@ nav{
 }
 
 .hero-intro{
-    flex: 2 1 40rem;
+    flex: 1 1 40rem;
     text-align: center;
 }
+
 .hero-intro h2 {
     padding-top: 3rem;
 }
+
 .hero-intro p{
     padding: 5rem 10rem;
-    color: var(--gray-text);
+    color: #484848;
 }
+
 .hero-intro a{
-    padding: 2rem 8rem;
-    border: 3px solid black;
+    padding: 2rem 9rem;
+    background-color: #927B40;
     margin-bottom: 4rem;
+    color: white;
 }
 .hero-img{
     flex: 1 1 40rem;
@@ -127,31 +145,27 @@ nav{
     flex-wrap: wrap;
 }
 .about-text{
-    background: var(--background-color);
+    background: #414141;
     color: white;
-    flex: 2 1 40rem;
+    flex: 1 1 40rem;
     justify-content: space-around;
 }
 .about-text div{
-    padding: 3rem 8rem;
+    padding: 2rem 6rem;
 }
 .about-img{
     flex: 1 1 40rem;
     position: relative;
 }
 .about-text h3{
-    padding: 2rem 0rem;
+    padding-bottom: 1rem;
 }
 .about-text h2{
-    font-family: 'Great Vibes', cursive;
-    padding: 4rem;
-}
-.about-img h5{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    letter-spacing: 2rem;
+    font-family: 'Pattaya', serif;
+    line-height: 26px;
+    letter-spacing: .3rem;
+    padding-top: 2rem;
+
 }
 .about-img img{
     width: 100%;
@@ -192,7 +206,7 @@ nav{
     flex-wrap: wrap;
 }
 .form-wrapper{
-    flex: 3 1 40rem;
+    flex: 1 1 40rem;
 }
 
 .form-wrapper h2{
@@ -207,21 +221,18 @@ nav{
     background: var(--background-color);
     color: white;
     border: none;
-    padding: 1rem;
+    padding: 2rem;
 
 }
 .form-wrapper button{
-    padding: 1rem 8rem;
-    background: var(--special-color);
+    padding: 2rem 9rem;
+    background: #927B40;
     color: white;
     border: none;
     width: 100%;
 
 }
-.form-wrapper span{
-    font-size: var(--big);
-    color: var(--special-color);
-}
+
 .contact img{
     flex: 1 1 40rem;
 }
@@ -229,7 +240,7 @@ nav{
 /* Footer */
 footer{
     display: flex;
-    background: var(--background-color);
+    background: #414141;
     color: white;
     padding: 3rem 5%;
     align-items: center;
@@ -245,6 +256,9 @@ footer ul{
 footer h4{
     flex: 4 1 40rem;
     font-size: calc(1.4rem + 1vw);
+    font-family: 'Pattaya', serif;
+    line-height: 26px;
+    letter-spacing: .3rem;
 }
 
 /* Media Query */
@@ -266,7 +280,7 @@ footer h4{
     }
     .burger span{
         padding: 0.2rem 2rem;
-        background: var(--gray-text);
+        background: #484848;
         margin: 0.5rem 0rem;
         display: block;
         transition: all 0.5s ease;
@@ -278,7 +292,7 @@ footer h4{
        
     }
     .nav-links{
-        background: var(--background-color);
+        background: #414141;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -310,6 +324,7 @@ footer h4{
     .about-text div{
         padding: 3rem 3rem;
     }
+    
     /* Gallery */
     .gallery img{
         grid-row: auto;
